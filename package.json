@@ -1,0 +1,23 @@
+{
+  "name": "battlefield-stats-express",
+  "version": "1.0.0",
+  "description": "A simple battlefield stats express middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "connect",
+    "battlefield",
+    "bf1",
+    "bf4",
+    "statistics"
+  ],
+  "author": "Matt McFarland",
+  "license": "MIT",
+  "dependencies": {
+    "battlefield-stats": "^1.0.4"
+  }
+}
