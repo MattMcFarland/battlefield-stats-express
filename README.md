@@ -9,25 +9,20 @@ npm install battlefield-stats-express
 ```
 
 ```javascript
-var bfs = require('battlefield-stats-express');
-// You can get a token at https://battlefieldtracker.com/site-api
-app.use('/api', bfs(YOUR_API_TOKEN))
-```
-Use the same url routes and parameters found at http://docs.trnbattlefield.apiary.io/
-Now you can navigate to `yourhost/api/` and the rest of the url is proxied to battle-tracker's api using your api key.
-
-## Full example
-```javascript
 const express = require('express');
 const battlefieldStats = require('battlefield-stats-express');
 const app = express();
-const bfs = battlefieldStats(YOUR_API_TOKEN); // obtained from https://battlefieldtracker.com/site-api
+
+// Get or use your key from https://battlefieldtracker.com/site-api`
+const bfs = battlefieldStats(YOUR_API_TOKEN);
+
 app.use('/api', bfs)
 app.listen(3000);
 ```
 
-Now you can see results when you navigate to: http://localhost:3000/api/Stats/DetailedStats?platform=3&displayName=Ravic
+Now you can see results when you navigate to http://localhost:3000/api/Stats/DetailedStats?platform=3&displayName=Ravic
 
+## API Docs
 For documentation use http://docs.trnbattlefield.apiary.io/ then replace `https://battlefieldtracker.com/bf1/api/` with `http://localhost:3000/api`
 
 ## Advanced Usage
